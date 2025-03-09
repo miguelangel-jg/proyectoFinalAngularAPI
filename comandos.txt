@@ -1,0 +1,5 @@
+GET http://localhost:8000/api/camisetas — Obtener todas las camisetas.
+GET http://localhost:8000/api/camisetas/{id} — Obtener una camiseta por su ID.
+POST http://localhost:8000/api/camisetas — Crear una camiseta.
+PUT http://localhost:8000/api/camisetas/{id} — Actualizar una camiseta.
+DELETE http://localhost:8000/api/camisetas/{id} — Eliminar una camiseta.

@@ -1,19 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\CamisetaController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('camisetas', [CamisetaController::class, 'index']); // Obtener todas las camisetas
+Route::get('camisetas/{id}', [CamisetaController::class, 'show']); // Obtener camiseta por ID
+Route::post('camisetas', [CamisetaController::class, 'store']); // Crear una nueva camiseta
+Route::put('camisetas/{id}', [CamisetaController::class, 'update']); // Actualizar una camiseta
+Route::delete('camisetas/{id}', [CamisetaController::class, 'destroy']); // Eliminar una camiseta
