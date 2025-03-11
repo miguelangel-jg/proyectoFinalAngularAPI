@@ -25,7 +25,7 @@
                 <td>{{ camiseta.temporada }}</td>
                 <td>{{ camiseta.marca }}</td>
                 <td>{{ camiseta.talla }}</td>
-                <td>{{ camiseta.precio }}€</td>
+                <td>{{ camiseta.precio | precioFormato }}</td>
                 <td>{{ camiseta.stock }}</td>
                 <td>
                     <a [routerLink]="['/camisetas', camiseta.id]" class="btn btn-info btn-sm text-white">

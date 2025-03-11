@@ -14,7 +14,7 @@
                 <p><strong>Temporada:</strong> {{ camiseta.temporada }}</p>
                 <p><strong>Marca:</strong> {{ camiseta.marca }}</p>
                 <p><strong>Talla:</strong> {{ camiseta.talla }}</p>
-                <p><strong>Precio:</strong> {{ camiseta.precio }}€</p>
+                <p><strong>Precio:</strong> {{ camiseta.precio | precioFormato}}</p>
                 <p><strong>Stock:</strong> {{ camiseta.stock }}</p>
             </div>
         </div>

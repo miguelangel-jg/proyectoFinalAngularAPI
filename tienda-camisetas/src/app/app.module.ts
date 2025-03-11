@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BusquedaComponent } from './busqueda/busqueda.component';
-import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';  // Asegúrate de importarlo
+import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
+import { PrecioFormatoPipe } from './pipes/precio-formato.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-en
     CamisetasComponent,
     CamisetaDetalleComponent,
     BusquedaComponent,
-    PaginaNoEncontradaComponent
+    PaginaNoEncontradaComponent,
+    PrecioFormatoPipe
   ],
   imports: [
     BrowserModule,
