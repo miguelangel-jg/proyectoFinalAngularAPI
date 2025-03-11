@@ -17,4 +17,7 @@ export class CamisetaService {
   obtenerCamisetas(): Observable<Camiseta[]> {
     return this.http.get<Camiseta[]>(URL_BASE);
   }
+  getCamisetaById(id: string | null): Observable<any> {
+    return this.http.get(`${URL_BASE}/${id}`);
+  }
 }
