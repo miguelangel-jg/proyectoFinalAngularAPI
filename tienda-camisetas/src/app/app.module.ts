@@ -7,14 +7,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { BusquedaComponent } from './busqueda/busqueda.component';  // Asegúrate de importarlo
+import { BusquedaComponent } from './busqueda/busqueda.component';
+import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';  // Asegúrate de importarlo
 
 @NgModule({
   declarations: [
     AppComponent,
     CamisetasComponent,
     CamisetaDetalleComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,

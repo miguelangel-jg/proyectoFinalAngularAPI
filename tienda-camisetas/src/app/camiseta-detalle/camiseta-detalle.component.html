@@ -16,28 +16,6 @@
                 <p><strong>Talla:</strong> {{ camiseta.talla }}</p>
                 <p><strong>Precio:</strong> {{ camiseta.precio }}€</p>
                 <p><strong>Stock:</strong> {{ camiseta.stock }}</p>
-
-                <h4 class="mt-4">Actualizar Stock</h4>
-                <!-- <form (ngSubmit)="actualizarStock()"> -->
-                <div class="mb-3">
-                    <label for="stock" class="form-label">Nuevo Stock:</label>
-                    <!-- <input type="number" [(ngModel)]="nuevoStock" name="stock" class="form-control" min="0"
-                            max="1000" required> -->
-                </div>
-                <button type="submit" class="btn btn-success">Actualizar Stock</button>
-                <!-- </form> -->
-
-                <div class="mt-3">
-                    <h4>Más opciones...</h4>
-                    <div class="d-flex">
-                        <a [routerLink]="['/camisetas', camiseta.id, 'editar']"
-                            class="btn btn-warning text-white me-2 mt-3">
-                            Editar Camiseta
-                        </a>
-
-                        <!-- <button (click)="eliminarCamiseta()" class="btn btn-danger mt-3">Eliminar Camiseta</button> -->
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -46,7 +24,3 @@
         <p class="text-danger">No se pudo encontrar la camiseta seleccionada.</p>
     </div>
 </div>
-
-<footer class="bg-dark text-white text-center py-4 mt-5">
-    <p>Proyecto Creado por Miguel Angel Jimenez Garrido.</p>
-</footer>
