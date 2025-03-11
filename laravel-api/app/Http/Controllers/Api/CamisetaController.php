@@ -73,4 +73,22 @@ class CamisetaController extends Controller
 
         return response()->json(['message' => 'Camiseta eliminada']);
     }
+
+    //Buscar camiseta por nombre de equipo:
+    public function search(Request $request)
+    {
+        // Obtener el valor del parámetro 'nombre_equipo' del cuerpo de la solicitud (usando POST)
+        $query = $request->input('nombre_equipo');
+
+        // Si el parámetro 'nombre_equipo' está presente, realizamos la búsqueda
+        $camisetas = Camiseta::where('nombre_equipo', 'LIKE', "%{$query}%")->get();
+
+        // Si no se encuentran camisetas, devolvemos un mensaje de error
+        if ($camisetas->isEmpty()) {
+            return response()->json(['message' => 'No se encontraron camisetas para ese equipo'], 404);
+        }
+
+        // Si encontramos camisetas, las devolvemos
+        return response()->json($camisetas);
+    }
 }

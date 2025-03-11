@@ -6,13 +6,15 @@ import { CamisetaDetalleComponent } from './camiseta-detalle/camiseta-detalle.co
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';  // Asegúrate de importarlo
+import { AppRoutingModule } from './app-routing.module';
+import { BusquedaComponent } from './busqueda/busqueda.component';  // Asegúrate de importarlo
 
 @NgModule({
   declarations: [
     AppComponent,
     CamisetasComponent,
-    CamisetaDetalleComponent
+    CamisetaDetalleComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
