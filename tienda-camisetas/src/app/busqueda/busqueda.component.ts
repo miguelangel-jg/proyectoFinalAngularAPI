@@ -25,11 +25,11 @@ export class BusquedaComponent implements OnInit {
     this.camisetaService.buscarCamisetas(cadena).subscribe(
       (data: Camiseta[]) => {
         this.camisetas = data;
-        this.mensajeError = null;  // Limpiar mensaje de error si encontramos camisetas
+        this.mensajeError = null;
       },
       (error) => {
         console.error('Error al buscar camisetas:', error);
-        this.mensajeError = 'No se encontraron camisetas del ' + cadena;
+        this.mensajeError = 'No se encontraron camisetas del equipo: ' + cadena;
       }
     );
   }

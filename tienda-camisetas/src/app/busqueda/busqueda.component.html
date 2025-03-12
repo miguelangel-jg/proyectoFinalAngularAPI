@@ -3,12 +3,10 @@
     <input type="text" [(ngModel)]="cadena" class="form-control my-2" placeholder="Ingrese un término..." />
     <button (click)="buscarCamisetas(cadena)" class="btn btn-primary">Buscar</button>
 
-    <!-- Mostrar mensaje de error si no se encuentran camisetas -->
     <div *ngIf="mensajeError" class="alert alert-danger mt-3">
         <p>{{ mensajeError }}</p>
     </div>
 
-    <!-- Mostrar resultados de camisetas si existen -->
     <div *ngIf="camisetas.length > 0" class="mt-4">
         <h3>Resultados:</h3>
         <table class="table table-striped">
@@ -27,7 +25,6 @@
             <tbody>
                 <tr *ngFor="let camiseta of camisetas">
                     <td>
-                        <!-- Imagen de la camiseta -->
                         <img alt="Imagen Camiseta" class="img-fluid" style="max-width: 100px;"
                             src="assets/images/{{ camiseta.imagen }}" />
                     </td>
@@ -35,10 +32,9 @@
                     <td>{{ camiseta.temporada }}</td>
                     <td>{{ camiseta.marca }}</td>
                     <td>{{ camiseta.talla }}</td>
-                    <td>{{ camiseta.precio | precioFormato}}</td>
+                    <td>{{ camiseta.precio | precioFormato}}€</td>
                     <td>{{ camiseta.stock }}</td>
                     <td>
-                        <!-- Enlace para ver detalles de la camiseta -->
                         <a [routerLink]="['/camisetas', camiseta.id]" class="btn btn-info btn-sm text-white">Ver
                             Detalles</a>
                     </td>
